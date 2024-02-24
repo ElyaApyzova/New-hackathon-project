@@ -1,13 +1,14 @@
+
 import React, { useState } from "react";
 import { AppBar, Toolbar, IconButton, Typography, useMediaQuery,  useScrollTrigger, Slide, Menu, MenuItem, ListItemIcon } from '@mui/material';
-import { makeStyles, useTheme } from '@mui/material/styles';
-import { BrowserRouter, Link } from "react-router-dom";
+import { makeStyles } from '@mui/styles';
+import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
-import TreeIcon from '@mui/icons-material/Tree';
+import NaturePeopleIcon from '@mui/icons-material/NaturePeople';
 import PersonIcon from '@mui/icons-material/Person';
 import MemoryIcon from '@mui/icons-material/Memory';
-import FamilyIcon from '@mui/icons-material/Family';
+import FamilyRestroomIcon from '@mui/icons-material/FamilyRestroom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -50,6 +51,7 @@ const Header = (props) => {
     return (
         <div className={classes.root}>
             <HideOnScroll {...props}>
+            <BrowserRouter>
                 <AppBar>
                     <Toolbar>
                         <Typography variant="h6" className={classes.title}>
@@ -88,7 +90,7 @@ const Header = (props) => {
                                     </MenuItem>
                                     <MenuItem component={Link} to="/Trees" onClick={handleClose}>
                                         <ListItemIcon>
-                                            <TreeIcon />
+                                        <NaturePeopleIcon />
                                         </ListItemIcon>
                                         Деревья
                                     </MenuItem>
@@ -106,7 +108,7 @@ const Header = (props) => {
                                     </MenuItem>
                                     <MenuItem component={Link} to="/FamilyTree" onClick={handleClose}>
                                         <ListItemIcon>
-                                            <FamilyIcon />
+                                            <FamilyRestroomIcon/>
                                         </ListItemIcon>
                                         Семейное древо
                                     </MenuItem>
@@ -115,6 +117,14 @@ const Header = (props) => {
                         )}
                     </Toolbar>
                 </AppBar>
+                <Switch>
+            <Route exact path="/" component={Главная} />
+            <Route exact path="/Trees" component={Деревья} />
+            <Route exact path="/About" component={О нас} />
+            <Route exact path="/Memories" component={Воспоминания} />
+            <Route exact path="/FamilyTree" component={Семейное древо} />
+          </Switch>
+                </BrowserRouter>
             </HideOnScroll>
         </div>
     );
