@@ -1,23 +1,105 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { AppBar, Toolbar, Stack, MenuItem, IconButton } from '@mui/material'
+import { AppBar, Container, Toolbar, Box, Stack, IconButton, Menu, MenuItem, ListItemIcon  } from '@mui/material'
 import { Typography } from "@mui/material";
-import LanguageIcon from '@mui/icons-material/Language';
+import Language from '../../assets/language.png';
 import Logo from '../../assets/Logo.png';
+import MenuIcon from '@mui/icons-material/Menu';
+import HomeIcon from '@mui/icons-material/Home';
+import NaturePeopleIcon from '@mui/icons-material/NaturePeople';
+import PersonIcon from '@mui/icons-material/Person';
+import MemoryIcon from '@mui/icons-material/Memory';
+import FamilyRestroomIcon from '@mui/icons-material/FamilyRestroom';
 
 
 
 const Header = () => {
+    const [anchorElNav, setAnchorElNav] = React.useState(null);
+    
   
+    const handleOpenNavMenu = (event) => {
+      setAnchorElNav(event.currentTarget);
+    };
+    
+  
+    const handleCloseNavMenu = () => {
+      setAnchorElNav(null);
+    };
+  
+   
 
   return (
     <AppBar position='static' sx={{ 
         background: '#A0D206',  
         color:'#000000',}}>
+        <Container maxWidth="xl">
        <Toolbar>
         <img src={Logo}  edge='start' aria-label="logo" sx={{ width: '85px', height: '66px'}}  />
         <Typography variant='h6' component='div' sx={{ flexGrow: 1, color: '#0E0E0E'}}>Семейный сад</Typography>
-        <Stack direction='row' spacing={4} sx={{  fontSize: '18px'}}>
+        
+        <Box edge='end' sx={{ display: { xs: 'flex', md: 'none' } }}>
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              color="inherit"
+            >
+                 <MenuIcon />
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'left',
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{
+                display: { xs: 'block', md: 'none' },
+              }}
+            >
+                                    <MenuItem  to="/" >
+                                        <ListItemIcon>
+                                            <HomeIcon />
+                                        </ListItemIcon>
+                                        Главное
+                                    </MenuItem>
+                                    <MenuItem  to="/Trees" >
+                                        <ListItemIcon>
+                                        <NaturePeopleIcon />
+                                        </ListItemIcon>
+                                        Деревья
+                                    </MenuItem>
+                                    <MenuItem  to="/About us" >
+                                        <ListItemIcon>
+                                            <PersonIcon />
+                                        </ListItemIcon>
+                                        О нас
+                                    </MenuItem>
+                                    <MenuItem  to="/Memories" >
+                                        <ListItemIcon>
+                                            <MemoryIcon />
+                                        </ListItemIcon>
+                                        Воспоминания
+                                    </MenuItem>
+                                    <MenuItem  to="/FamilyTree" >
+                                        <ListItemIcon>
+                                            <FamilyRestroomIcon/>
+                                        </ListItemIcon>
+                                        Семейное древо
+                                    </MenuItem>
+                                </Menu>
+          </Box>
+          
+        <Stack direction='row' spacing={4} edge='center' sx={{  fontSize: '18px', display: { xs: 'none', md: 'flex' }}}>
         <MenuItem  to="/">Главное
         </MenuItem>
         <MenuItem  to="/Tree">Деревья 
@@ -29,11 +111,12 @@ const Header = () => {
         <MenuItem  to="/Family tree">Семейное древо
         </MenuItem>     
         </Stack>
-        <IconButton>
-        <LanguageIcon />
+        <Stack direction='row' spacing={1}>
+        <img src={Language} edge='end' aria-label="language" />
         <Typography sx={{ fontSize: '14px'}}>Русский</Typography>
-        </IconButton>
+        </Stack>
        </Toolbar>
+       </Container>
     </AppBar>
   );
 };
@@ -47,11 +130,6 @@ import { AppBar, Toolbar, IconButton, Typography, useMediaQuery,  useScrollTrigg
 import { makeStyles } from '@mui/styles';
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
-import HomeIcon from '@mui/icons-material/Home';
-import NaturePeopleIcon from '@mui/icons-material/NaturePeople';
-import PersonIcon from '@mui/icons-material/Person';
-import MemoryIcon from '@mui/icons-material/Memory';
-import FamilyRestroomIcon from '@mui/icons-material/FamilyRestroom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -96,63 +174,7 @@ const Header = (props) => {
             <HideOnScroll {...props}>
             <BrowserRouter>
                 
-                        {isMobile && (
-                            <>
-                                <IconButton
-                                    className={classes.menuButton}
-                                    edge="start"
-                                    color="inherit"
-                                    aria-label="menu"
-                                    onClick={handleMenu}
-                                >
-                                    <MenuIcon />
-                                </IconButton>
-                                <Menu
-                                    id="menu-appbar"
-                                    anchorEl={anchor}
-                                    anchorOrigin={{
-                                        vertical: "top",
-                                        horizontal: "right",
-                                    }}
-                                    transformOrigin={{
-                                        vertical: "top",
-                                        horizontal: "right",
-                                    }}
-                                    open={open}
-                                    onClose={handleClose}
-                                >
-                                    <MenuItem component={Link} to="/" onClick={handleClose}>
-                                        <ListItemIcon>
-                                            <HomeIcon />
-                                        </ListItemIcon>
-                                        Главное
-                                    </MenuItem>
-                                    <MenuItem component={Link} to="/Trees" onClick={handleClose}>
-                                        <ListItemIcon>
-                                        <NaturePeopleIcon />
-                                        </ListItemIcon>
-                                        Деревья
-                                    </MenuItem>
-                                    <MenuItem component={Link} to="/About us" onClick={handleClose}>
-                                        <ListItemIcon>
-                                            <PersonIcon />
-                                        </ListItemIcon>
-                                        О нас
-                                    </MenuItem>
-                                    <MenuItem component={Link} to="/Memories" onClick={handleClose}>
-                                        <ListItemIcon>
-                                            <MemoryIcon />
-                                        </ListItemIcon>
-                                        Воспоминания
-                                    </MenuItem>
-                                    <MenuItem component={Link} to="/FamilyTree" onClick={handleClose}>
-                                        <ListItemIcon>
-                                            <FamilyRestroomIcon/>
-                                        </ListItemIcon>
-                                        Семейное древо
-                                    </MenuItem>
-                                </Menu>
-                            </>
+                        
                         )}
                     </Toolbar>
                 </AppBar>
