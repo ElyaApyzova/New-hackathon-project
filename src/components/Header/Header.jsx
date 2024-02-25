@@ -1,5 +1,48 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import { AppBar, Toolbar, Stack, MenuItem, IconButton } from '@mui/material'
+import { Typography } from "@mui/material";
+import LanguageIcon from '@mui/icons-material/Language';
+import Logo from '../../assets/Logo.png';
 
-import React, { useState } from "react";
+
+
+const Header = () => {
+  
+
+  return (
+    <AppBar position='static' sx={{ 
+        background: '#A0D206',  
+        color:'#000000',}}>
+       <Toolbar>
+        <img src={Logo}  edge='start' aria-label="logo" sx={{ width: '85px', height: '66px'}}  />
+        <Typography variant='h6' component='div' sx={{ flexGrow: 1, color: '#0E0E0E'}}>Семейный сад</Typography>
+        <Stack direction='row' spacing={4} sx={{  fontSize: '18px'}}>
+        <MenuItem  to="/">Главное
+        </MenuItem>
+        <MenuItem  to="/Tree">Деревья 
+        </MenuItem>
+        <MenuItem  to="/About us">О нас
+        </MenuItem>
+        <MenuItem  to="/Memories">Воспоминания
+        </MenuItem>
+        <MenuItem  to="/Family tree">Семейное древо
+        </MenuItem>     
+        </Stack>
+        <IconButton>
+        <LanguageIcon />
+        <Typography sx={{ fontSize: '14px'}}>Русский</Typography>
+        </IconButton>
+       </Toolbar>
+    </AppBar>
+  );
+};
+
+export default Header;
+
+
+
+/*import React, { useState } from "react";
 import { AppBar, Toolbar, IconButton, Typography, useMediaQuery,  useScrollTrigger, Slide, Menu, MenuItem, ListItemIcon } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
@@ -52,11 +95,7 @@ const Header = (props) => {
         <div className={classes.root}>
             <HideOnScroll {...props}>
             <BrowserRouter>
-                <AppBar>
-                    <Toolbar>
-                        <Typography variant="h6" className={classes.title}>
-                            Семейный сад
-                        </Typography>
+                
                         {isMobile && (
                             <>
                                 <IconButton
@@ -94,7 +133,7 @@ const Header = (props) => {
                                         </ListItemIcon>
                                         Деревья
                                     </MenuItem>
-                                    <MenuItem component={Link} to="/About" onClick={handleClose}>
+                                    <MenuItem component={Link} to="/About us" onClick={handleClose}>
                                         <ListItemIcon>
                                             <PersonIcon />
                                         </ListItemIcon>
@@ -120,7 +159,7 @@ const Header = (props) => {
                 <Switch>
             <Route exact path="/" component={Главная} />
             <Route exact path="/Trees" component={Деревья} />
-            <Route exact path="/About" component={О нас} />
+            <Route exact path="/About us" component={О нас} />
             <Route exact path="/Memories" component={Воспоминания} />
             <Route exact path="/FamilyTree" component={Семейное древо} />
           </Switch>
@@ -130,6 +169,6 @@ const Header = (props) => {
     );
 };
 
-export default Header;
+export default Header;*/
 
 
