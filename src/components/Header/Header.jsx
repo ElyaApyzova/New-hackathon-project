@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { AppBar, Container, Toolbar, Box, Stack, IconButton, Menu, MenuItem, ListItemIcon  } from '@mui/material'
+import {  Link as RouterLink  } from "react-router-dom";
+import { AppBar, Container, Toolbar, Box, Stack, IconButton, Menu, MenuItem, ListItemIcon, Link  } from '@mui/material'
 import { Typography } from "@mui/material";
 import Language from '../../assets/language.png';
 import Logo from '../../assets/Logo.png';
@@ -10,6 +10,7 @@ import NaturePeopleIcon from '@mui/icons-material/NaturePeople';
 import PersonIcon from '@mui/icons-material/Person';
 import MemoryIcon from '@mui/icons-material/Memory';
 import FamilyRestroomIcon from '@mui/icons-material/FamilyRestroom';
+
 
 
 
@@ -34,9 +35,30 @@ const Header = () => {
         color:'#000000',}}>
         <Container maxWidth="xl">
        <Toolbar>
-        <img src={Logo}  edge='start' aria-label="logo" sx={{ width: '85px', height: '66px'}}  />
-        <Typography variant='h6' component='div' sx={{ flexGrow: 1, color: '#0E0E0E'}}>Семейный сад</Typography>
+        <img src={Logo}  edge='start'  aria-label="logo" sx={{ width: '85px', height: '66px'}}  />
+        <Typography variant='h6' component='div'  sx={{ flexGrow: 1, color: '#0E0E0E'}}>Семейный сад</Typography>
         
+       
+         
+        <Stack direction='row' spacing={4}  marginRight={12}   sx={{  fontSize: '18px',  display: { xs: 'none', md: 'flex' }}}>
+            
+        <Link component={RouterLink} to="/Home" sx={{ textDecoration: 'none', color: '#0E0E0E'  }}>Главное
+        </Link>
+        
+        <Link  component={RouterLink}  to="/Tree" sx={{ textDecoration: 'none', color: '#0E0E0E'}}>Деревья 
+        </Link>
+        <Link  component={RouterLink}  to="/About us" sx={{ textDecoration: 'none', color: '#0E0E0E'}}>О нас
+        </Link>
+        <Link  component={RouterLink}  to="/Memories" sx={{ textDecoration: 'none', color: '#0E0E0E'}}>Воспоминания
+        </Link>
+        <Link  component={RouterLink}  to="/Family tree" sx={{ textDecoration: 'none', color: '#0E0E0E'}}>Семейное древо
+        </Link> 
+        </Stack>  
+        
+        <Stack direction='row' spacing={1}>
+        <img src={Language} edge='end' aria-label="language" />
+        <Typography sx={{ fontSize: '14px'}}>Русский</Typography>
+        </Stack>
         <Box edge='end' sx={{ display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -98,23 +120,6 @@ const Header = () => {
                                     </MenuItem>
                                 </Menu>
           </Box>
-          
-        <Stack direction='row' spacing={4} edge='center' sx={{  fontSize: '18px', display: { xs: 'none', md: 'flex' }}}>
-        <MenuItem  to="/">Главное
-        </MenuItem>
-        <MenuItem  to="/Tree">Деревья 
-        </MenuItem>
-        <MenuItem  to="/About us">О нас
-        </MenuItem>
-        <MenuItem  to="/Memories">Воспоминания
-        </MenuItem>
-        <MenuItem  to="/Family tree">Семейное древо
-        </MenuItem>     
-        </Stack>
-        <Stack direction='row' spacing={1}>
-        <img src={Language} edge='end' aria-label="language" />
-        <Typography sx={{ fontSize: '14px'}}>Русский</Typography>
-        </Stack>
        </Toolbar>
        </Container>
     </AppBar>
