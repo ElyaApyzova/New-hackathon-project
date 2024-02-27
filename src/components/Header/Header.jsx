@@ -56,9 +56,9 @@ const Header = () => {
         </Stack>  
         
         <Stack direction='row' spacing={1}>
-        <img src={Language} edge='end' aria-label="language" />
-        <Typography sx={{ fontSize: '14px'}}>Русский</Typography>
-        </Stack>
+  <img src={Language} alt='language' />
+  <Typography variant='body2'>Русский</Typography>
+</Stack>
         <Box edge='end' sx={{ display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
