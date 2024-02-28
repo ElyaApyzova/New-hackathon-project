@@ -31,24 +31,21 @@ const Header = () => {
     };
 
     return (
-        <AppBar position='static' sx={{
-            background: '#A0D206',
-            color: '#000000',
-        }}>
+        <AppBar position='static' sx={{ background: '#A0D206', color: '#000000' }}>
             <Container maxWidth="xl">
                 <Toolbar>
                     <img src={Logo} edge='start' aria-label="logo" sx={{ width: '85px', height: '66px' }} />
                     <Typography variant='h6' component='div' sx={{ flexGrow: 1, color: '#0E0E0E' }}>Семейный сад</Typography>
 
-                    <Stack direction='row' spacing={4} marginRight={12}  sx={{ fontSize: '18px', cursor: 'pointer', display: { xs: 'none', md: 'flex' } }}>
+                    <Stack direction='row' spacing={4} marginRight={12} sx={{ fontSize: '18px', display: { xs: 'none', md: 'flex' } }}>
                         <Link component={RouterLink} to="/" sx={{ textDecoration: 'none', color: '#0E0E0E' }}>Главное</Link>
-                        <Link component={RouterLink} to="/Tree" sx={{ textDecoration: 'none', color: '#0E0E0E' }}>Деревья</Link>
+                        <Link component={RouterLink} to="/TreeCards" sx={{ textDecoration: 'none', color: '#0E0E0E' }}>Деревья</Link>
                         <Link component={RouterLink} to="/About us" sx={{ textDecoration: 'none', color: '#0E0E0E' }}>О нас</Link>
                         <Link component={RouterLink} to="/Memories" sx={{ textDecoration: 'none', color: '#0E0E0E' }}>Воспоминания</Link>
                         <Link component={RouterLink} to="/Family tree" sx={{ textDecoration: 'none', color: '#0E0E0E' }}>Семейное древо</Link>
                     </Stack>
 
-                    <Stack direction='row' spacing={1} alignItems="center" cursor='pointer' onClick={handleLanguageChange} sx={{ cursor: 'pointer' }}>
+                    <Stack direction='row' spacing={1} alignItems="center" sx={{ cursor: 'pointer' }} onClick={handleLanguageChange}>
                         <img src={Language} alt={language === 'ru' ? 'Russian language' : 'Kyrgyz language'} />
                         <Typography sx={{ fontSize: '14px' }}>{language === 'ru' ? 'Русский' : 'Кыргызча'}</Typography>
                     </Stack>
@@ -78,35 +75,33 @@ const Header = () => {
                             }}
                             open={Boolean(anchorElNav)}
                             onClose={handleCloseNavMenu}
-                            sx={{
-                                display: { xs: 'block', md: 'none' },
-                            }}
+                            sx={{ display: { xs: 'block', md: 'none' } }}
                         >
-                            <MenuItem component={RouterLink} to="/">
+                            <MenuItem to="/">
                                 <ListItemIcon>
                                     <HomeIcon />
                                 </ListItemIcon>
                                 Главное
                             </MenuItem>
-                            <MenuItem component={RouterLink} to="/Trees">
+                            <MenuItem to="/TreesCards">
                                 <ListItemIcon>
                                     <NaturePeopleIcon />
                                 </ListItemIcon>
                                 Деревья
                             </MenuItem>
-                            <MenuItem component={RouterLink} to="/About us">
+                            <MenuItem to="/About us">
                                 <ListItemIcon>
                                     <PersonIcon />
                                 </ListItemIcon>
                                 О нас
                             </MenuItem>
-                            <MenuItem component={RouterLink} to="/Memories">
+                            <MenuItem to="/Memories">
                                 <ListItemIcon>
                                     <MemoryIcon />
                                 </ListItemIcon>
                                 Воспоминания
                             </MenuItem>
-                            <MenuItem component={RouterLink} to="/FamilyTree">
+                            <MenuItem to="/FamilyTree">
                                 <ListItemIcon>
                                     <FamilyRestroomIcon />
                                 </ListItemIcon>
