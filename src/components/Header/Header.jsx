@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { AppBar, Container, Toolbar, Box, Stack, IconButton, Menu, MenuItem, ListItemIcon, Link, Typography } from '@mui/material';
 import Language from '../../assets/language.png';
-import Logo from '../../assets/Logo.png';
+import Logo1 from '../../assets/logo1.png';
 import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
 import NaturePeopleIcon from '@mui/icons-material/NaturePeople';
@@ -34,11 +34,11 @@ const Header = () => {
         <AppBar position='static' sx={{ background: '#A0D206', color: '#000000' }}>
             <Container maxWidth="xl">
                 <Toolbar>
-                    <img src={Logo} edge='start' aria-label="logo" sx={{ width: '85px', height: '66px' }} />
-                    <Typography variant='h6' component='div' sx={{ flexGrow: 1, color: '#0E0E0E' }}>Семейный сад</Typography>
+                    <img src={Logo1} edge='start' alt="Logo" width='68' height='52'/>
+                    <Typography variant='h6' component='div'  sx={{ flexGrow: 1, color: '#0E0E0E' }}>Семейный сад</Typography>
 
-                    <Stack direction='row' spacing={4} marginRight={12} sx={{ fontSize: '18px', display: { xs: 'none', md: 'flex' } }}>
-                        <Link component={RouterLink} to="/" sx={{ textDecoration: 'none', color: '#0E0E0E' }}>Главное</Link>
+                    <Stack direction='row' spacing={4} marginRight={12} style={{ fontWeight: 400 }}  sx={{ fontSize: '18px',  display: { xs: 'none', md: 'flex' } }}>
+                        <Link component={RouterLink} to="/" sx={{ textDecoration: 'none', color: '#0E0E0E',  }}>Главное</Link>
                         <Link component={RouterLink} to="/TreeCards" sx={{ textDecoration: 'none', color: '#0E0E0E' }}>Деревья</Link>
                         <Link component={RouterLink} to="/About us" sx={{ textDecoration: 'none', color: '#0E0E0E' }}>О нас</Link>
                         <Link component={RouterLink} to="/Memories" sx={{ textDecoration: 'none', color: '#0E0E0E' }}>Воспоминания</Link>
