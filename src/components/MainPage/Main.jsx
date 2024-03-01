@@ -29,6 +29,7 @@ export default function Main() {
             padding: 2,
             color: "white",
             fontWeight: 600,
+            "&:hover": { backgroundColor: "#00821E" },
           }}
         >
           Создать мое дерево

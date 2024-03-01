@@ -3,6 +3,7 @@ import MyAppBar from "./MyAppBar/MyAppBar";
 import TreeCards from "./TreeCards";
 import MyComponent from "./MyAppBar/MyComponent";
 import Main from "./MainPage/Main";
+import StateCard from "./states/StateCard";
 
 const Home = () => {
   return (
@@ -11,13 +12,16 @@ const Home = () => {
         <MyAppBar />
       </div>
       <div>
-        <Main/>
+        <Main />
       </div>
       <div>
         <MyComponent />
       </div>
       <div>
         <TreeCards />
+      </div>
+      <div>
+        <StateCard/>
       </div>
     </div>
   );
