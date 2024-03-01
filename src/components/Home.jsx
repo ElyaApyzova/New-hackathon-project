@@ -4,7 +4,7 @@ import TreeCards from "./TreeCards";
 import MyComponent from "./MyAppBar/MyComponent";
 import Main from "./MainPage/Main";
 import StateCard from "./states/StateCard";
-
+import NewsAdvertisement  from "./NewsAdvertisement/NewsAdvertisement"
 const Home = () => {
   return (
     <div>
@@ -22,6 +22,9 @@ const Home = () => {
       </div>
       <div>
         <StateCard/>
+      </div>
+      <div>
+        <NewsAdvertisement />
       </div>
     </div>
   );

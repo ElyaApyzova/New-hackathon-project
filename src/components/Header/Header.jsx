@@ -40,7 +40,7 @@ const Header = () => {
                     <Stack direction='row' spacing={4} marginRight={12} style={{ fontWeight: 400 }}  sx={{ fontSize: '18px',  display: { xs: 'none', md: 'flex' } }}>
                         <Link component={RouterLink} to="/" sx={{ textDecoration: 'none', color: '#0E0E0E',  }}>Главное</Link>
                         <Link component={RouterLink} to="/TreeCards" sx={{ textDecoration: 'none', color: '#0E0E0E' }}>Деревья</Link>
-                        <Link component={RouterLink} to="/About us" sx={{ textDecoration: 'none', color: '#0E0E0E' }}>О нас</Link>
+                        <Link component={RouterLink} to="/AboutUs" sx={{ textDecoration: 'none', color: '#0E0E0E' }}>О нас</Link>
                         <Link component={RouterLink} to="/Memories" sx={{ textDecoration: 'none', color: '#0E0E0E' }}>Воспоминания</Link>
                         <Link component={RouterLink} to="/Family tree" sx={{ textDecoration: 'none', color: '#0E0E0E' }}>Семейное древо</Link>
                     </Stack>
@@ -89,7 +89,7 @@ const Header = () => {
                                 </ListItemIcon>
                                 Деревья
                             </MenuItem>
-                            <MenuItem to="/About us">
+                            <MenuItem to="/AboutUs">
                                 <ListItemIcon>
                                     <PersonIcon />
                                 </ListItemIcon>
