@@ -42,20 +42,20 @@ const Header = () => {
          
         <Stack direction='row' spacing={4}  marginRight={12}   sx={{  fontSize: '18px',  display: { xs: 'none', md: 'flex' }}}>
             
-        <Link component={RouterLink} to="/Home" sx={{ textDecoration: 'none', color: '#0E0E0E'  }}>Главное
+        <Link component={RouterLink} to="/" sx={{ textDecoration: 'none', color: '#0E0E0E'  }}>Главное
         </Link>
         
-        <Link  component={RouterLink}  to="/Tree" sx={{ textDecoration: 'none', color: '#0E0E0E'}}>Деревья 
+        <Link  component={RouterLink}  to="/tree" sx={{ textDecoration: 'none', color: '#0E0E0E'}}>Деревья 
         </Link>
-        <Link  component={RouterLink}  to="/About us" sx={{ textDecoration: 'none', color: '#0E0E0E'}}>О нас
+        <Link  component={RouterLink}  to="/about us" sx={{ textDecoration: 'none', color: '#0E0E0E'}}>О нас
         </Link>
-        <Link  component={RouterLink}  to="/Memories" sx={{ textDecoration: 'none', color: '#0E0E0E'}}>Воспоминания
+        <Link  component={RouterLink}  to="/memories" sx={{ textDecoration: 'none', color: '#0E0E0E'}}>Воспоминания
         </Link>
-        <Link  component={RouterLink}  to="/Family tree" sx={{ textDecoration: 'none', color: '#0E0E0E'}}>Семейное древо
+        <Link  component={RouterLink}  to="/family tree" sx={{ textDecoration: 'none', color: '#0E0E0E'}}>Семейное древо
         </Link> 
         </Stack>  
         
-        <Stack direction='row' spacing={1}>
+        <Stack direction='row' spacing={1}> 
   <img src={Language} alt='language' />
   <Typography variant='body2'>Русский</Typography>
 </Stack>
