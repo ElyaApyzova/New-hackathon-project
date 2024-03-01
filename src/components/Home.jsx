@@ -6,6 +6,9 @@ import Main from "./MainPage/Main";
 import Info from "./MyAppBar/Info";
 import { AppBar, Grid, Paper, Typography } from "@mui/material";
 import StateCard from "./states/StateCard";
+import NewsAdvertisement  from "./NewsAdvertisement/NewsAdvertisement"
+
+
 
 
 const Home = () => {
@@ -28,6 +31,10 @@ const Home = () => {
       </div>
       <div>
 
+        <NewsAdvertisement />
+      </div>
+
+
         <Info/>
       </div>
       <div>
@@ -35,6 +42,7 @@ const Home = () => {
       <Typography variant="h1" component='div' textAlign='start'  sx={{ fontSize: '40px',  margin: '10px 0px 10px 150px',  }}>Новости и обьявления</Typography>
         </AppBar>
   
+
 
     </div>
   );
