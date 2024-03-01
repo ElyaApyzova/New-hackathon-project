@@ -1,5 +1,6 @@
 
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MyAppBar from "./MyAppBar/MyAppBar";
 import TreeCards from "./TreeCards";
 import MyComponent from "./MyAppBar/MyComponent";
@@ -8,18 +9,18 @@ const Home = () => {
     return (
   <div>
 
-    <div>
+    <div>     
     <MyAppBar/>
     </div>
       <div>
        <h1>Hello</h1> 
-      </div>
+       </div>
       <div>
     <MyComponent/>
     </div>
       <div>
     <TreeCards/>
-    </div>
+      </div>
   </div>
     );
   };
