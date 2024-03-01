@@ -1,27 +1,26 @@
-
 import React from "react";
 import MyAppBar from "./MyAppBar/MyAppBar";
 import TreeCards from "./TreeCards";
 import MyComponent from "./MyAppBar/MyComponent";
+import Main from "./MainPage/Main";
 
 const Home = () => {
-    return (
-  <div>
-
+  return (
     <div>
-    <MyAppBar/>
-    </div>
       <div>
-       <h1>Hello</h1> 
+        <MyAppBar />
       </div>
       <div>
-    <MyComponent/>
-    </div>
+        <Main/>
+      </div>
       <div>
-    <TreeCards/>
+        <MyComponent />
+      </div>
+      <div>
+        <TreeCards />
+      </div>
     </div>
-  </div>
-    );
-  };
-  
-  export default Home;
+  );
+};
+
+export default Home;
