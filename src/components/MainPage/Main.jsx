@@ -2,8 +2,12 @@ import React from "react";
 import { Container, Typography, Button } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import main from "../../assets/main.png";
+import { useNavigate } from "react-router-dom";
+
 
 export default function Main() {
+const navigate = useNavigate()
+
   return (
     <Container
       sx={{
@@ -30,6 +34,7 @@ export default function Main() {
             color: "white",
             fontWeight: 600,
           }}
+          onClick={() => navigate("/create")}
         >
           Создать мое дерево
         </Button>

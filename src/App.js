@@ -6,6 +6,7 @@ import Tree from  './components/Tree';
 import Footer from "./components/Footer/Footer";
 
 import TreeCards from "./components/TreeCards";
+import Create from "./components/Creat/Create";
 
 
 
@@ -16,11 +17,11 @@ function App() {
     <div>
       <BrowserRouter>
         <Header />
-      
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/tree" element={<Tree />} />
-          <Route path="/TreeCards" element={<TreeCards />} />
+          <Route path="/treeCards" element={<TreeCards />} />
+          <Route path="/create" element={<Create />} />
         </Routes>
         <Footer/>
       </BrowserRouter>
