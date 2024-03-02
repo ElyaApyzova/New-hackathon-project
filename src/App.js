@@ -5,7 +5,9 @@ import Home from "./components/Home";
 import Tree from  './components/Tree';
 import Footer from "./components/Footer/Footer";
 import TreeCards from "./components/TreeCards";
+import Create from "./components/Creat/Create";
 import AboutUs from "./components/About us/AboutUs";
+
 
 
 function App() {
@@ -16,6 +18,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/tree" element={<Tree />} />
+          <Route path="/treeCards" element={<TreeCards />} />
+          <Route path="/create" element={<Create />} />
           <Route path="/TreeCards" element={<TreeCards />} />
           <Route path="/AboutUs" element={<AboutUs />} />
         </Routes>
