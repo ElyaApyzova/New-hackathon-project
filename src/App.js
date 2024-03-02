@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Footer from "./components/Footer/Footer";
 import TreeCards from "./components/TreeCards";
+import AboutUs from "./components/AboutUs/AboutUs";
+
 
 
 function App() {
@@ -14,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/TreeCards" element={<TreeCards />} />
+          <Route path="/AboutUs" element={<AboutUs />} />
         </Routes>
         <Footer/>
       </BrowserRouter>
