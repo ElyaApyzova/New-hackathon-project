@@ -33,6 +33,7 @@ const navigate = useNavigate()
             padding: 2,
             color: "white",
             fontWeight: 600,
+            "&:hover": { backgroundColor: "#00821E" },
           }}
           onClick={() => navigate("/create")}
         >
