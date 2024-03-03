@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/ElyaApyzova/New-hackathon-project.git/static/css/main.8d8fdf52.css",
+    "main.js": "/ElyaApyzova/New-hackathon-project.git/static/js/main.7af2983f.js",
+    "static/js/453.5f9899b4.chunk.js": "/ElyaApyzova/New-hackathon-project.git/static/js/453.5f9899b4.chunk.js",
+    "static/media/main.png": "/ElyaApyzova/New-hackathon-project.git/static/media/main.deafbd6fb5cb580d9832.png",
+    "static/media/news_image.png": "/ElyaApyzova/New-hackathon-project.git/static/media/news_image.98db39235856e9087f7c.png",
+    "static/media/Rectangle.png": "/ElyaApyzova/New-hackathon-project.git/static/media/Rectangle.12b62b16aa69aacee135.png",
+    "static/media/eco_image4.png": "/ElyaApyzova/New-hackathon-project.git/static/media/eco_image4.51353818228e08fb6af0.png",
+    "static/media/tree_4.png": "/ElyaApyzova/New-hackathon-project.git/static/media/tree_4.b9d5c233686052094a41.png",
+    "static/media/tree_3.png": "/ElyaApyzova/New-hackathon-project.git/static/media/tree_3.33af8e5cf798b3b6ff4b.png",
+    "static/media/tree_2.png": "/ElyaApyzova/New-hackathon-project.git/static/media/tree_2.89b71496e08d2286fb07.png",
+    "static/media/eco_image1.png": "/ElyaApyzova/New-hackathon-project.git/static/media/eco_image1.26da7e71439fc18aa196.png",
+    "static/media/tree_1.png": "/ElyaApyzova/New-hackathon-project.git/static/media/tree_1.cbd21af18513ce311a6b.png",
+    "static/media/eco_image3.png": "/ElyaApyzova/New-hackathon-project.git/static/media/eco_image3.05189c3add79405a4126.png",
+    "static/media/eco_image2.png": "/ElyaApyzova/New-hackathon-project.git/static/media/eco_image2.f37e5950d640333ce6e4.png",
+    "index.html": "/ElyaApyzova/New-hackathon-project.git/index.html",
+    "main.8d8fdf52.css.map": "/ElyaApyzova/New-hackathon-project.git/static/css/main.8d8fdf52.css.map",
+    "main.7af2983f.js.map": "/ElyaApyzova/New-hackathon-project.git/static/js/main.7af2983f.js.map",
+    "453.5f9899b4.chunk.js.map": "/ElyaApyzova/New-hackathon-project.git/static/js/453.5f9899b4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8d8fdf52.css",
+    "static/js/main.7af2983f.js"
+  ]
+}
