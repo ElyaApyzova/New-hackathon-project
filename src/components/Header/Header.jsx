@@ -31,7 +31,7 @@ const Header = () => {
     };
 
     return (
-        <AppBar position='static' sx={{ background: '#A0D206', color: '#000000' }}>
+        <AppBar position='static' sx={{ background: '#A0D206', color: '#000000', boxShadow: "none" }}>
             <Container maxWidth="xl">
                 <Toolbar>
                     <img src={Logo1} edge='start' alt="Logo" width='68' height='52'/>

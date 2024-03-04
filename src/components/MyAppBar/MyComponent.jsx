@@ -8,33 +8,33 @@ import { Container } from '@mui/material';
 const MyComponent = () => {
   return (
     <Container sx={{paddingLeft:'70px'}}>
-    <Typography variant="h1" component='div' textAlign='center'  sx={{ fontSize: '40px', color: '#2E2E2E', marginTop: '160px', marginBottom: '80px' }}>Какое дерево может стать семейным?</Typography>
+    <Typography variant="h1" component='div' textAlign='center'  sx={{ fontSize: '40px', fontWeight: "600", color: '#2E2E2E', marginTop: '150px', marginBottom: '100px' }}>Какое дерево может стать семейным?</Typography>
 
     <Grid  container spacing={4}  >
-      <Grid sx={{boxShadow:'none', borderColor:'#fff', marginLeft:'30px'}}>
-        <Paper sx={{ width: '571px', height: '356px'}} >
+      <Grid item xs={6}sx={{boxShadow:'none', borderColor:'#fff', }}>
+        <Paper sx={{ width: '571px', height: '356px', borderRadius: "10px"}} >
           
-        <img src={rectangle}  edge='start'  sx={{ width: '571px', height: '356px'}}      />
+        <img src={rectangle}  edge='start'  sx={{ width: '571px', height: '356px', borderRadius: "10px"}}  alt='growTree' />
         </Paper>
       </Grid>
-      <Grid  sx={{marginLeft:'33px'}}>
+       <Grid item xs={6}>
         <Paper  sx={{boxShadow:'none', borderColor:'#fff'}} >
-          {/* Ваш блок с текстом */}
-          <Typography sx={{fontSize:'18px', fontWeight:'600',}} >
-          Выбирая дерево, важно учитывать многие факторы: <br />
-          продолжительность жизни, размер, диаметр и форма <br />
-           кроны, жизнестойкость, толщина ствола. Давайте <br />
+          <Typography sx={{fontSize:'18px', fontWeight:'500', marginBottom: "20px"}} >
+          Выбирая дерево, важно учитывать многие факторы: 
+          продолжительность жизни, размер, диаметр и форма 
+           кроны, жизнестойкость, толщина ствола. Давайте 
             рассмотрим каждый параметр подробнее:
-            <br />
-            <br />
-            1. Расчетная продолжительность жизни. Вековые <br />
-             деревья живут более 200 лет. К ним относятся <br /> 
-             черешчатый дуб, вяз, сосна, ясень. Долгоживущие (от <br />
-             100 до 150 лет) – это орех маньчжурский, ель, <br /> 
-             амурский бархат, тис, липа. Недолгоживущие (до 100 лет) <br />
+            </Typography>
+            <Typography sx={{fontSize:'18px', fontWeight:'500'}} >
+            1. Расчетная продолжительность жизни. Вековые 
+             деревья живут более 200 лет. К ним относятся  
+             черешчатый дуб, вяз, сосна, ясень. Долгоживущие (от 
+             100 до 150 лет) – это орех маньчжурский, ель,  
+             амурский бархат, тис, липа. Недолгоживущие (до 100 лет) 
              – яблоня, груша, береза, клен, черемуха, тополь.
           </Typography>
         </Paper>
+      </Grid>
       </Grid>
       <Grid  sx={{marginTop:'50px', marginBottom:'50px' ,  marginLeft:'30px'}}>
         <Paper  sx={{boxShadow:'none', borderColor:'#fff'}} >
@@ -55,7 +55,7 @@ const MyComponent = () => {
           </Typography>
         </Paper>
       </Grid>
-    </Grid>
+    
     </Container>
   );
 }

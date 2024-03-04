@@ -8,7 +8,7 @@ import TreeCards from "./components/TreeCards";
 import AboutUs from "./components/AboutUs/AboutUs";
 
 import Create from "./components/Creat/Create";
-import AboutUs from "./components/About us/AboutUs";
+
 
 
 
@@ -21,7 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
 
-          <Route path="/tree" element={<Tree />} />
+          
       
           <Route path="/create" element={<Create />} />
 

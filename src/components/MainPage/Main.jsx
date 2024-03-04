@@ -14,13 +14,13 @@ const navigate = useNavigate()
         display: "flex",
         justifyContent: "space-between",
         gap: "50px",
-        marginTop: "30px",
+        marginTop: "50px",
       }}
     >
-      <Grid sx={{ display: "flex", flexDirection: "column", gap: "50px" }}>
-        <Grid sx={{display: 'flex', flexDirection: 'column', gap: '10px'}}>
+      <Grid sx={{ display: "flex", flexDirection: "column", gap: "40px" }}>
+        <Grid sx={{display: 'flex', flexDirection: 'column', gap: '15px'}}>
           <Typography variant="h3" sx={{ fontWeight: 600 }}>
-            Создайте свое “Семейное древо” вместе с нами.
+            Создайте свое <span style={{ color: "#00821E"}}>“Семейное древо”</span> вместе с нами.
           </Typography>
           <Typography sx={{ fontWeight: 400, fontSize: "30px" }} component="p">
             Сохраним и приумножим наши леса
@@ -41,7 +41,7 @@ const navigate = useNavigate()
         </Button>
       </Grid>
       <Grid>
-        <img style={{ width: 1100 }} src={main} />
+        <img style={{ width: 1100, borderRadius: "10px" }} src={main} alt="Mainimage" />
       </Grid>
     </Container>
   );

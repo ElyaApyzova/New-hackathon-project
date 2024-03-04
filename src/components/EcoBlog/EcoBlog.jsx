@@ -27,13 +27,14 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
   return (
     <Container sx={{marginBottom: "100px"}}>
   <Typography
-    variant="h3"
+    variant="h1"
     component="div"
     textAlign="center"
     sx={{
       color: "#2E2E2E",
       marginTop: "50px",
       marginBottom: "50px",
+      fontSize: "40px",
       fontWeight: "600"
     }}
   >
