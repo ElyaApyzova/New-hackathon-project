@@ -7,8 +7,8 @@ import { Container } from '@mui/material';
 
 const MyComponent = () => {
   return (
-    <Container>
-    <Typography variant="h1" component='div' textAlign='center'  sx={{ fontSize: '40px', fontWeight: "600", color: '#2E2E2E', marginTop: '150px', marginBottom: '100px' }}>Какое дерево может стать семейным?</Typography>
+    <Container sx={{ marginBottom: "100px" }}>
+    <Typography variant="h1" component='div' textAlign='center'  sx={{ fontSize: '40px', fontWeight: "600", color: '#2E2E2E', marginTop: '150px', marginBottom: '70px' }}>Какое дерево может стать семейным?</Typography>
 
     <Grid  container spacing={4}>
       <Grid item xs={6}sx={{boxShadow:'none', borderColor:'#fff', }}>

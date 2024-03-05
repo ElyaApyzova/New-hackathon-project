@@ -32,8 +32,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
     textAlign="center"
     sx={{
       color: "#2E2E2E",
-      marginTop: "50px",
-      marginBottom: "50px",
+      marginBottom: "70px",
       fontSize: "40px",
       fontWeight: "600"
     }}
@@ -43,7 +42,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
   <Grid container justifyContent="center" rowSpacing={8} columnSpacing={2}>
     <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
       <div onClick={goToPrev} style={{ cursor: "pointer" }}>
-        <ArrowBackIosIcon />
+        <ArrowBackIosIcon  sx={{ "&:hover": { color: "#00821E" }}}/>
       </div>
       {eco_data.slice(currentIndex, currentIndex + 4).map((item, index) => (
         <Grid item xs={12} sm={6} md={3} key={index} sx={{ display: 'flex', justifyContent: 'center' }}>
@@ -70,7 +69,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
         </Grid>
       ))}
       <div onClick={goToNext} style={{ cursor: "pointer" }}>
-        <ArrowForwardIosIcon />
+        <ArrowForwardIosIcon sx={{ "&:hover": { color: "#00821E" }}}/>
       </div>
     </Grid>
   </Grid>

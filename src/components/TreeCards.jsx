@@ -35,7 +35,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
     sx={{
       color: "#2E2E2E",
       marginTop: "50px",
-      marginBottom: "50px",
+      marginBottom: "70px",
       fontSize: '40px',
       fontWeight: "600"
     }}
@@ -45,12 +45,12 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
   <Grid container justifyContent="center" rowSpacing={8} columnSpacing={2}>
     <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
       <div onClick={goToPrev} style={{ cursor: "pointer" }}>
-        <ArrowBackIosIcon />
+        <ArrowBackIosIcon sx={{ "&:hover": { color: "#00821E" }}}/>
       </div>
       {data_tree.slice(currentIndex, currentIndex + 4).map((item, index) => (
         <Grid item xs={12} sm={6} md={3} key={index} sx={{ display: 'flex', justifyContent: 'center' }}>
           <Card sx={{ maxWidth: 240, p: "10px", borderRadius: "6px" }}>
-            <CardActionArea>
+            <CardActionArea sx={{ bg: "none" }}>
               <CardMedia
                 component="img"
                 image={item.image}
@@ -77,10 +77,11 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
             <CardActions sx={{ display: "flex", justifyContent: "center" }}>
               <Button
                 sx={{
+                  fontSize: "14px",
                   cursor: "pointer",
                   backgroundColor: "#A0D206",
                   color: "#FFFFFF",
-                  p: "8px 30px",
+                  p: "6px 25px",
                   borderRadius: "10px",
                   "&:hover": { backgroundColor: "#00821E" },
                 }}
@@ -92,7 +93,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
         </Grid>
       ))}
       <div onClick={goToNext} style={{ cursor: "pointer" }}>
-        <ArrowForwardIosIcon />
+        <ArrowForwardIosIcon  sx={{ "&:hover": { color: "#00821E" }}}/>
       </div>
     </Grid>
   </Grid>

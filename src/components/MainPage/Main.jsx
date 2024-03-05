@@ -30,8 +30,9 @@ const navigate = useNavigate()
           sx={{
             background: "#A0D206",
             width: "max-content",
-            padding: 2,
+            padding: "14px",
             color: "white",
+            borderRadius: "10px",
             fontWeight: 600,
             "&:hover": { backgroundColor: "#00821E" },
           }}
