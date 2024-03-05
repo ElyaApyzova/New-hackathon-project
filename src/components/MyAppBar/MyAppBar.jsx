@@ -27,7 +27,8 @@ const MyAppBar = () => {
                 borderWidth: "1px",
                 borderRadius: "25px",
                 paddingLeft: "10px",
-                fontSize: "14px"
+                fontSize: "14px",
+                "&:hover": { borderColor: "#00821E" }
               }}
               placeholder="Поиск"
               startAdornment={
