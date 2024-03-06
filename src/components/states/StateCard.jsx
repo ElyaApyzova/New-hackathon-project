@@ -1,50 +1,14 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
 import { Typography, Container, Button } from "@mui/material";
-import man from "../../assets/man.png";
-import earth from "../../assets/earth.png";
-import trees from "../../assets/trees.png";
-import money from "../../assets/money.png";
+import items from "../../assets/items";
 
-const items = [
-  {
-    id: Math.random().toString(),
-    img: man,
-    count: 102,
-    click: false,
-    title: "Количество волонтеров",
-    text: "Волонтеры — это люди, которые добровольно и безвозмездно трудятся для блага общества или отдельных его представителей.",
-  },
-  {
-    id: Math.random().toString(),
-    img: earth,
-    count: 145,
-    click: false,
-    title: "Всего засажено участков",
-    text: "Волонтеры — это люди, которые добровольно и безвозмездно трудятся для блага общества или отдельных его представителей.",
-  },
-  {
-    id: Math.random().toString(),
-    img: trees,
-    count: 102,
-    click: false,
-    title: "Всего высажено деревьев",
-    text: "Волонтеры — это люди, которые добровольно и безвозмездно трудятся для блага общества или отдельных его представителей.",
-  },
-  {
-    id: Math.random().toString(),
-    img: money,
-    count: 102,
-    click: true,
-    title: "Собранная сумма",
-    text: "Волонтеры — это люди, которые добровольно и безвозмездно трудятся для блага общества или отдельных его представителей.",
-  },
-];
+
 
 export default function StateCard() {
   return (
     <Container>
-      <Typography sx={{ textAlign: "center", fontSize: 30 }} component="h3">
+      <Typography sx={{ textAlign: "center", fontSize: 40, marginBottom: "70px", fontWeight: "600" }} component="div">
         Фактически на 13.02.2024
       </Typography>
       <Grid sx={{ display: "flex", justifyContent: "space-between" }}>
@@ -53,17 +17,17 @@ export default function StateCard() {
             <Grid
               sx={{
                 width: "250px",
-                height: "500px",
+                height: "490px",
                 borderRadius: "20px",
                 borderColor: "#A0D206",
                 borderWidth: 1,
-                padding: "2rem",
+                padding: "1.5rem",
                 position: "relative",
                 overflow: "hidden",
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
-                boxShadow: 5
+                boxShadow: 4
               }}
             >
               <div
@@ -72,7 +36,7 @@ export default function StateCard() {
                   height: "250px",
                   backgroundColor: item.click ? '#A0D206' : '#F5F6FA',
                   position: "absolute",
-                  top: -50,
+                  top: -60,
                   left: -1,
                   borderEndStartRadius: "50%",
                   borderBottomRightRadius: "50%",
@@ -83,7 +47,7 @@ export default function StateCard() {
               ></div>
               <Grid sx={{display: 'flex', flexDirection: 'column',  textAlign: 'center', alignItems: 'center'}}>
                 <img src={item.img} alt="" />
-                <Typography sx={{fontSize: '46px', fontWeight: 600, color: item.click ? "#fff" : "#A0D206"}}>{item.count}</Typography>
+                <Typography sx={{fontSize: '45px', fontWeight: 600, color: item.click ? "#fff" : "#A0D206"}}>{item.count}</Typography>
               </Grid>
               <Grid sx={{
                 display: 'flex',
@@ -98,8 +62,9 @@ export default function StateCard() {
                   sx={{
                     background: "#A0D206",
                     width: "max-content",
+                    padding: "6px 20px",
+                    borderRadius: "10px",
                     color: "white",
-                    fontWeight: 600,
                     "&:hover": { backgroundColor: "#00821E" },
                   }}
                 >
