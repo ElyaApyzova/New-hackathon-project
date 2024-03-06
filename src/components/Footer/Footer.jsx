@@ -23,9 +23,9 @@ const Footer = () => {
           <Toolbar>
             <Grid container spacing={3}>
             
-              <Grid item xs={12} sm={3}>
-              <Stack direction='row' spacing={2}  marginRight={12}   sx={{  fontSize: '18px',  display: { xs: 'none', md: 'flex' }}}>
-                <img src={Logo}  edge='start'  aria-label="logo" sx={{ width: '85px', height: '66px'}}      />
+              <Grid item xs={12} sm={4}>
+              <Stack direction='row' spacing={2}  marginRight={12}   sx={{  fontSize: '18px',  display: { xs: 'none', md: 'flex', alignItems: "center" }}}>
+                <img src={Logo}  edge='start'  aria-label="logo" sx={{ width: '85px', height: '66px'}} />
                 
                 <Typography variant='h5' component='div'  sx={{ flexGrow: 1, color: '#fff'}}>Семейный сад</Typography>
                 </Stack>
@@ -33,7 +33,7 @@ const Footer = () => {
   
              
               <Grid item xs={12} sm={4}>
-              <Stack  sx={{  fontSize: '18px',  display: { xs: 'none', md: 'flex' }}}>
+              <Stack spacing={1} sx={{  fontSize: '18px',  display: { xs: 'none', md: 'flex' }}}>
                 <Link href="#" color="inherit" variant="body2" sx={{ textDecoration: 'none',    }}>
                 Деревья
                 </Link>
@@ -54,7 +54,7 @@ const Footer = () => {
   
               {/* Третий столбец */}
               <Grid item xs={12} sm={4}>
-              <Stack  sx={{  fontSize: '18px',  display: { xs: 'none', md: 'flex' }}}> 
+              <Stack spacing={1} sx={{  fontSize: '18px',  display: { xs: 'none', md: 'flex' }}}> 
 
                 <Stack direction='row' spacing={1}  marginRight={12}   sx={{  fontSize: '18px',  display: { xs: 'none', md: 'flex' }}}>
                    <img src={receivers}  edge='start'  aria-label="logo" sx={{ width: '17px', height: '16px'}}      />
