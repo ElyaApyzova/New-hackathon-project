@@ -29,7 +29,7 @@ const navigate = useNavigate()
         <Button
           sx={{
             background: "#A0D206",
-            width: "max-content",
+            width: "220px",
             padding: "14px",
             color: "white",
             borderRadius: "10px",

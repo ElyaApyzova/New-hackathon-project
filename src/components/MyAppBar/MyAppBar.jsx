@@ -57,7 +57,9 @@ const MyAppBar = () => {
               <ArrowForwardIosIcon 
                 edge="start"
                 aria-label="arrow"
-                sx={{ width: "12px", height: "12px", marginLeft: "2px" }}
+                sx={{ width: "12px", height: "12px", marginLeft: "2px",
+                "&:hover": { color: "#00821E" }
+                 }}
               />
               </Link>
             </Stack>
