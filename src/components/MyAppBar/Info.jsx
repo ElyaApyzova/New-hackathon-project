@@ -7,7 +7,6 @@ import Link from '@mui/material/Link';
 import { Container } from '@mui/material';
 import { Link as RouterLink } from "react-router-dom";
 
-
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 
