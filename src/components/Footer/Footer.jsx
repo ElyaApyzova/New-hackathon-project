@@ -33,19 +33,19 @@ const Footer = () => {
   
              
               <Grid item xs={12} sm={4}>
-              <Stack spacing={1} sx={{  fontSize: '18px',  display: { xs: 'none', md: 'flex' }}}>
+              <Stack spacing={2} sx={{  fontSize: '18px',  display: { xs: 'none', md: 'flex' }}}>
                 <Link href="#" color="inherit" variant="body2" sx={{ textDecoration: 'none',    }}>
                 Деревья
                 </Link>
-                <br />
+                
                 <Link component={RouterLink}  to="/About us"  color="inherit" variant="body2"sx={{ marginTop:'-10px', textDecoration: 'none',    }}>
                 О нас
                 </Link>
-                <br />
+                
                 <Link component={RouterLink}  to="/Memories" color="inherit" variant="body2"sx={{ marginTop:'-10px',  textDecoration: 'none',    }}>
                 Воспоминанания
                 </Link>
-                <br />
+               
                 <Link component={RouterLink}  to="/Family tree" color="inherit" variant="body2"sx={{ marginTop:'-10px', textDecoration: 'none',    }}>
                 Семейное древо
                 </Link>
@@ -54,26 +54,26 @@ const Footer = () => {
   
               {/* Третий столбец */}
               <Grid item xs={12} sm={4}>
-              <Stack spacing={1} sx={{  fontSize: '18px',  display: { xs: 'none', md: 'flex' }}}> 
+              <Stack spacing={2} sx={{  fontSize: '18px',  display: { xs: 'none', md: 'flex' }}}> 
 
-                <Stack direction='row' spacing={1}  marginRight={12}   sx={{  fontSize: '18px',  display: { xs: 'none', md: 'flex' }}}>
+                <Stack direction='row' spacing={1.2}  marginRight={12}   sx={{  fontSize: '18px',  display: { xs: 'none', md: 'flex' }}}>
                    <img src={receivers}  edge='start'  aria-label="logo" sx={{ width: '17px', height: '16px'}}      />
                    <Link href="#" color="inherit" variant="body2"sx={{  marginTop:'-10px', textDecoration: 'none',    }}>
                 
                    +996700123456
                   </Link>
                 </Stack>
-                <br />
-                <Stack direction='row' spacing={1}  marginRight={12}   sx={{  fontSize: '18px',  display: { xs: 'none', md: 'flex' }}}>
+                
+                <Stack direction='row' spacing={1.2}  marginRight={12}   sx={{  fontSize: '18px',  display: { xs: 'none', md: 'flex' }}}>
                    <img src={printer}  edge='start'  aria-label="logo" sx={{ width: '17px', height: '16px'}}      />
                    <Link href="#" color="inherit" variant="body2"sx={{  marginTop:'-10px', textDecoration: 'none',    }}>
                 
                    @semeinyi sad
                   </Link>
                   </Stack>
-                <br />
+                
 
-                <Stack direction='row' spacing={1}  marginRight={12}   sx={{  fontSize: '18px',  display: { xs: 'none', md: 'flex' }}}>
+                <Stack direction='row' spacing={1.2}  marginRight={12}   sx={{  fontSize: '18px',  display: { xs: 'none', md: 'flex' }}}>
                    <img src={instagram}  edge='start'  aria-label="logo" sx={{ width: '17px', height: '16px'}}      />
                    <Link href="#" color="inherit" variant="body2"sx={{  marginTop:'-10px', textDecoration: 'none',    }}>
                 

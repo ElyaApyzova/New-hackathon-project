@@ -24,7 +24,7 @@ const NewsAdvertisement = () => {
     </Box>
 
     <Container>
-    <Typography variant="h3" component="div" marginTop={4} marginBottom={4} sx={{
+    <Typography variant="h3" component="div" marginTop={6} marginBottom={6} sx={{
         fontWeight: '700'
       }}>
     В Бишкеке состарилось 30 процентов деревьев-агроном
