@@ -15,6 +15,7 @@ const navigate = useNavigate()
         justifyContent: "space-between",
         gap: "50px",
         marginTop: "50px",
+        marginBottom: "100px"
       }}
     >
       <Grid sx={{ display: "flex", flexDirection: "column", gap: "40px" }}>
