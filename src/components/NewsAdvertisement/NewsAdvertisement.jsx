@@ -30,8 +30,8 @@ const NewsAdvertisement = () => {
     В Бишкеке состарилось 30 процентов деревьев-агроном
           </Typography>
           </Container>
-          <Container>
-  <Grid container spacing={4} marginBottom={10}>
+          <Container sx={{ marginBottom: "100px"}}>
+  <Grid container spacing={4}>
     <Grid item xs={6}>
       <Typography variant="body1" component="div" marginBottom={1} sx={{
         fontWeight: '500', color: '#A49F9F'

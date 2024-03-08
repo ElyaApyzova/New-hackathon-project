@@ -3,7 +3,7 @@ import { Container, Typography, Button, Grid } from "@mui/material";
 
 const AboutUs = () => {
   return (
-    <Container>
+    <Container sx={{ marginBottom: "100px"}}>
       <Typography variant="h4" component="div" marginTop={4}>
         О нас
       </Typography>
@@ -37,7 +37,6 @@ const AboutUs = () => {
           <Button
             sx={{
               marginTop: '24px',
-              marginBottom: '24px',
               cursor: "pointer",
               backgroundColor: "#A0D206",
               color: "#FFFFFF",

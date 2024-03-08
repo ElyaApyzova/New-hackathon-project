@@ -10,6 +10,7 @@ import StateCard from "./states/StateCard";
 import NewsAdvertisement from "./NewsAdvertisement/NewsAdvertisement";
 import EcoBlog from "./EcoBlog/EcoBlog";
 import FamilyTree from "./MyAppBar/FamilyTree";
+import Calculator from "./Calculator/Calculator";
 
 
 
@@ -42,13 +43,9 @@ const Home = () => {
       <div>
         <NewsAdvertisement />
       </div>
-       
-      
-      
-  
-
-
-
+       <div>
+        <Calculator />
+       </div>
     </div>
   );
 };

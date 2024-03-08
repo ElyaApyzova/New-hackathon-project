@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import { Container, Typography, Button, Grid } from "@mui/material";
 
 const AboutUs = () => {
@@ -54,4 +54,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default AboutUs;*/
