@@ -120,6 +120,7 @@ const Calculator = () => {
             boxShadow: "2" }}>
           <Typography component="div" sx={{ fontSize: "18px", fontWeight: "600", color: "#6D6C6C", textAlign: "center", marginTop: "10px"}}>Онлайн калькулятор нейтрализации углерода</Typography>
           </List>
+          
           </Grid>
       </Grid>
     </Container>
