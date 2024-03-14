@@ -8,9 +8,10 @@ import {
   Divider,
 } from "@mui/material";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-
+import { useNavigate } from "react-router-dom";
 
 const Calculator = () => {
+  const navigate = useNavigate()
   return (
     <Container sx={{ marginBottom: "100px" }}>
       <Grid container spacing={4}>
@@ -35,6 +36,7 @@ const Calculator = () => {
                   backgroundColor: "#C8C8C8",
                   marginRight: "12px",
                 }}
+                onClick={() => navigate("/gallery")}
               />
               <Typography
                 sx={{

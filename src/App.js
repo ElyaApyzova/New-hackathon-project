@@ -7,6 +7,7 @@ import TreeCards from "./components/TreeCards";
 import AboutUs from "./components/AboutUs/AboutUs";
 import Create from "./components/Creat/Create";
 import FamilyTree from "./components/MyAppBar/FamilyTree";
+import Gallery from "./Pages/Gallery";
 
 
 
@@ -22,7 +23,7 @@ function App() {
           <Route path="/TreeCards" element={<TreeCards />} />
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/FamilyTree" element={<FamilyTree />} />
-         
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
         <Footer/>
       </BrowserRouter>
