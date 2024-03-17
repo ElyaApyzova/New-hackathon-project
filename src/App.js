@@ -9,6 +9,8 @@ import Create from "./components/Creat/Create";
 import FamilyTree from "./components/MyAppBar/FamilyTree";
 import Gallery from "./Pages/Gallery";
 import Contact from "./Pages/Contact";
+import Feedback from "./Pages/Feedback";
+
 
 
 
@@ -26,6 +28,7 @@ function App() {
           <Route path="/FamilyTree" element={<FamilyTree />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/feedback" element={<Feedback />} />
         </Routes>
         <Footer/>
       </Router>

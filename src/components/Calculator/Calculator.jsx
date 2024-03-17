@@ -56,6 +56,7 @@ const Calculator = () => {
                   backgroundColor: "#C8C8C8",
                   marginRight: "12px",
                 }}
+                onClick={() => navigate("/contact")}
               />
               <Typography
                 sx={{
@@ -75,6 +76,7 @@ const Calculator = () => {
                   backgroundColor: "#C8C8C8",
                   marginRight: "12px",
                 }}
+                onClick={() => navigate("/feedback")}
               />
               <Typography
                 sx={{
