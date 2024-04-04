@@ -4,6 +4,11 @@ import {
   Grid,
   List,
   ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemAvatar,
+  Avatar,
+  ListItemText,
  Typography,
   Divider,
 } from "@mui/material";
@@ -16,35 +21,73 @@ const Calculator = () => {
     <Container sx={{ marginBottom: "100px" }}>
       <Grid container spacing={4}>
         <Grid item xs={4}>
-          <List
-            aria-label="mailbox folders"
-            sx={{  p: 0,
+        <List>
+            <ListItem disablePadding>
+                <ListItemButton>
+                <ListItemIcon>
+                    <ListItemAvatar>
+                    <Avatar>
+                    <KeyboardArrowRightIcon />
+                    </Avatar>
+                    </ListItemAvatar>
+                    </ListItemIcon>
+                <ListItemText primary='List item 1' />
+                </ListItemButton>
+            </ListItem>
+            <Divider />
+            <ListItem>
+            <ListItemIcon>
+            <ListItemAvatar>
+                    <Avatar>
+                    <KeyboardArrowRightIcon />
+                    </Avatar>
+                    </ListItemAvatar>
+                    </ListItemIcon>
+                <ListItemText primary='List item 2' secondary='Secondary text' />
+            </ListItem>
+            <Divider />
+            <ListItem>
+            <ListItemIcon>
+            <ListItemAvatar>
+                    <Avatar>
+                    <KeyboardArrowRightIcon />
+                    </Avatar>
+                    </ListItemAvatar>
+                    </ListItemIcon>
+                <ListItemText primary='List item 3' />
+            </ListItem>
+          </List>
+         {/* <List sx={{ 
               width: '100%',
-              maxWidth: 280,
+              maxWidth: 300,
               borderRadius: 2,
               border: '2px solid',
               borderColor: '#C4C4C4',
               backgroundColor: '#FFFFFF',
-            boxShadow: "2" }}
-          >
+            boxShadow: "2" }}>
             <ListItem>
-              <KeyboardArrowRightIcon
-                sx={{
+              <ListItemButton>
+                <ListItemIcon>
+                  <ListItemAvatar>
+                    <Avatar  sx={{
                   width: "18px",
                   height: "18px",
-                  borderRadius: "50%",
                   backgroundColor: "#C8C8C8",
-                  marginRight: "12px",
-                }}
+                }}>
+              <KeyboardArrowRightIcon  sx={{width: '18px', height: '18px'}}
                 onClick={() => navigate("/gallery")}
               />
-              <Typography
+              </Avatar>
+              </ListItemAvatar>
+              </ListItemIcon>
+              <ListItemText  primary='Галерея наших работ'
                 sx={{
                   fontSize: "18px",
                   fontWeight: "600",
                   color: "#6D6C6C"
-                }}>Галерея наших работ
-              </Typography>
+                }}
+              />
+              </ListItemButton>
             </ListItem>
             <Divider component="li" />
             <ListItem>
@@ -123,8 +166,7 @@ const Calculator = () => {
               backgroundColor: '#FFFFFF',
             boxShadow: "2" }}>
           <Typography component="div" sx={{ fontSize: "18px", fontWeight: "600", color: "#6D6C6C", textAlign: "center", marginTop: "10px"}}>Онлайн калькулятор нейтрализации углерода</Typography>
-          </List>
-          
+            </List>*/}
           </Grid>
       </Grid>
     </Container>
