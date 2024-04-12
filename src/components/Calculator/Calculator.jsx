@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   Container,
   Grid,
@@ -13,80 +14,88 @@ import {
   Divider,
 } from "@mui/material";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import { useNavigate } from "react-router-dom";
+
 import { Box, TextField, MenuItem } from "@mui/material";
-import { useState } from "react";
-
-
-export const MuiSelect = () => {
-    const [countries, setCountries] = useState<string[]>([])
-    console.log({ countries })
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const value = event.target.value
-        setCountries(typeof value === 'string' ? value.split(',') : value)
-    }
 
 
 const Calculator = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const [countries, setCountries] = useState([]);
+  console.log({ countries });
+
+  const handleChange = (event) => {
+    const value = event.target.value
+    setCountries(typeof value === 'string' ? value.split(',') : value)
+  }
+
   return (
     <Container sx={{ marginBottom: "100px" }}>
       <Grid container spacing={4}>
         <Grid item xs={4}>
-        <List>
+          <List>
             <ListItem disablePadding>
-                <ListItemButton>
+              <ListItemButton>
                 <ListItemIcon>
-                    <ListItemAvatar>
+                  <ListItemAvatar>
                     <Avatar>
-                    <KeyboardArrowRightIcon />
+                      <KeyboardArrowRightIcon />
                     </Avatar>
-                    </ListItemAvatar>
-                    </ListItemIcon>
+                  </ListItemAvatar>
+                </ListItemIcon>
                 <ListItemText primary='List item 1' />
-                </ListItemButton>
+              </ListItemButton>
             </ListItem>
             <Divider />
             <ListItem>
-            <ListItemIcon>
-            <ListItemAvatar>
-                    <Avatar>
+              <ListItemIcon>
+                <ListItemAvatar>
+                  <Avatar>
                     <KeyboardArrowRightIcon />
-                    </Avatar>
-                    </ListItemAvatar>
-                    </ListItemIcon>
-                <ListItemText primary='List item 2' secondary='Secondary text' />
+                  </Avatar>
+                </ListItemAvatar>
+              </ListItemIcon>
+              <ListItemText primary='List item 2' secondary='Secondary text' />
             </ListItem>
             <Divider />
             <ListItem>
-            <ListItemIcon>
-            <ListItemAvatar>
-                    <Avatar>
+              <ListItemIcon>
+                <ListItemAvatar>
+                  <Avatar>
                     <KeyboardArrowRightIcon />
-                    </Avatar>
-                    </ListItemAvatar>
-                    </ListItemIcon>
-                <ListItemText primary='List item 3' />
+                  </Avatar>
+                </ListItemAvatar>
+              </ListItemIcon>
+              <ListItemText primary='List item 3' />
             </ListItem>
           </List>
 
           <Box width='250px'>
-        <TextField label='Select country' 
-        select value={countries} 
-        onChange={handleChange}
-        fullWidth
-        SelectProps={{
-            multiple: true
-        }}
-        size='small'
-        color="secondary"
-        helperText='Please select your country'
-        error>
-           <MenuItem value='KG'>Kyrgyzstan</MenuItem>
-           <MenuItem value='US'>USA</MenuItem>
-           <MenuItem value='GE'>Germany</MenuItem> 
-        </TextField>
-    </Box>
+            <TextField
+              label='Select country'
+              select
+              value={countries}
+              onChange={handleChange}
+              fullWidth
+              SelectProps={{
+                multiple: true
+              }}
+              size='small'
+              color="secondary"
+              helperText='Please select your country'
+              error
+            >
+              <MenuItem value='KG'>Kyrgyzstan</MenuItem>
+              <MenuItem value='US'>USA</MenuItem>
+              <MenuItem value='GE'>Germany</MenuItem>
+            </TextField>
+          </Box>
+        </Grid>
+      </Grid>
+    </Container>
+  );
+};
+
+export default Calculator;
          {/* <List sx={{ 
               width: '100%',
               maxWidth: 300,
@@ -197,10 +206,4 @@ const Calculator = () => {
             boxShadow: "2" }}>
           <Typography component="div" sx={{ fontSize: "18px", fontWeight: "600", color: "#6D6C6C", textAlign: "center", marginTop: "10px"}}>Онлайн калькулятор нейтрализации углерода</Typography>
             </List>*/}
-          </Grid>
-      </Grid>
-    </Container>
-  );
-};
-
-export default Calculator;
+       
